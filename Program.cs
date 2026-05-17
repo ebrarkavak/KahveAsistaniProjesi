@@ -9,7 +9,7 @@ namespace KahveAsistani
         {
             List<Kahve> menu = new List<Kahve>();
 
-            // --- 1. Espresso Tabanlı Kahveler ---
+            //  Espresso Tabanlı Kahveler
             menu.Add(new EspressoTabanli { 
                 Ad = "Latte", 
                 Icindekiler = "1 Shot Espresso, Buharlanmış Süt, İnce Süt Köpüğü", 
@@ -37,16 +37,16 @@ namespace KahveAsistani
                 Ad = "Iced Caramel Macchiato", 
                 Icindekiler = "Vanilya Şurubu, Soğuk Süt, Buz, 1 Shot Espresso ve Karamel Sos", 
                 ShotSayisi = 1, 
-                DemlemeSuresiSaniye = 50, // Katmanlı yapıldığı için biraz daha uzun sürüyor
+                DemlemeSuresiSaniye = 50, 
                 Fiyat = 160
             });
 
-            // --- 2. Filtre ve Demleme Kahveler ---
+            // Filtre ve Demleme Kahveler
             menu.Add(new FiltreKahve { 
                 Ad = "Filtre Kahve", 
                 Icindekiler = "Öğütülmüş Kahve Çekirdeği, Sıcak Su", 
                 FiltreTipi = "Kağıt veya Metal Filtre", 
-                DemlemeSuresiSaniye = 180, // 3 dakika
+                DemlemeSuresiSaniye = 180, 
                 Fiyat = 140 
             });
 
@@ -62,7 +62,7 @@ namespace KahveAsistani
                 Ad = "Buzlu Filtre Kahve", 
                 Icindekiler = "Demlenmiş Filtre Kahve, Bol Buz", 
                 FiltreTipi = "Buz Üzerine Süzme", 
-                DemlemeSuresiSaniye = 210, // Soğuma süresi dahil
+                DemlemeSuresiSaniye = 210,
                 Fiyat = 155 
             }); 
 
@@ -87,8 +87,8 @@ namespace KahveAsistani
                 {
                     menu[secim].ReceteGoster();
                   
-KahveYonetici yonetici = new KahveYonetici();
-yonetici.IslemiKaydet(menu[secim]);
+        KahveYonetici yonetici = new KahveYonetici();
+        yonetici.IslemiKaydet(menu[secim]);
                 }
                 else
                 {
